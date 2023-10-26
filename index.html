@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    
+    <title>Object Detection Test</title>
+</head>
+<style>
+    #body2{
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: linear-gradient(red 0%, green 100%);
+        background-repeat: no-repeat;
+        
+    }
+    h1{
+        font-size: 40px;
+    }
+
+    button{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <div id="body2">
+        <h1>Object Detection from Kchat</h1>
+        <br>
+        <button onclick="redirect('living')">Living Room</button>
+        <br>
+        <button onclick="redirect('dining')">Dining Hall</button>
+        <br>
+        <button onclick="redirect('backyard')">Backyard</button>
+        <br>
+        <button onclick="redirect('kitchen')">Kitchen</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
