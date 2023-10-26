@@ -44,8 +44,13 @@ function draw()
         var percentage = floor(objects[i - 1].confidence * 100);
         noFill();
         stroke("#FF0000");
-        text(objects[i - 1].label + " " + percentage + "%", objects[i - 1].x + 255, objects[i - 1].y + 115);
+        if(objects[i - 1].label == "couch"){
+            text(objects[i - 1].label + " " + percentage + "%", objects[i - 1].x + 105, objects[i - 1].y + 175);
+            rect(objects[i - 1].x + 105, objects[i - 1].y + 185, objects[i - 1].width + 200, objects[i - 1].height);
+        }else{
+            text(objects[i - 1].label + " " + percentage + "%", objects[i - 1].x + 255, objects[i - 1].y + 115);
         rect(objects[i - 1].x + 255, objects[i - 1].y + 155, objects[i - 1].width + 20, objects[i - 1].height);
+        }
     }
 }
 
